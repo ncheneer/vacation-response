@@ -5,10 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.provider.Telephony;
 import android.telephony.SmsManager;
 import android.telephony.SmsMessage;
-import android.util.Log;
 
 /**
  * Created by nancychen on 1/30/15.
@@ -24,7 +22,6 @@ public class SmsReceiver extends BroadcastReceiver {
         Boolean enabled = pref.getBoolean(
                 VacationResponseActivity.VACATION_RESPONSE_ENABLED, false);
 
-        Log.i("VacationResponseActivity", "Checked: " + String.valueOf(enabled));
         if (!enabled) {
             return;
         }

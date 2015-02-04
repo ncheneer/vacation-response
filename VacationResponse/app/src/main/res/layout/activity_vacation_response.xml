@@ -1,18 +1,28 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal" >
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/message_box_padding">
     <EditText android:id="@+id/edit_message"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/default_vacation_response"
+        android:hint="@string/message_prompt"
         android:gravity="center_vertical"
-        android:layout_weight="1"/>
-
+        android:textSize="@dimen/message_box_text_size"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical" />
+    <TextView android:id="@+id/display_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/message_box_text_size"
+        android:layout_weight="1"
+        android:visibility="gone"/>
     <Button
+        android:id="@+id/toggle_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_save"
-        android:onClick="saveResponse"/>
+        android:onClick="toggleDisplay" />
 </LinearLayout>
